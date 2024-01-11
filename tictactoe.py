@@ -1,6 +1,7 @@
 import csv
 import random
 
+
 # Classe pour le jeu Tic Tac Toe
 class TicTacToeGame:
     def __init__(self):
@@ -64,6 +65,7 @@ class TicTacToeGame:
         print('     {} | {} | {} '.format(s[3], s[4], s[5]))
         print('    -----------')
         print('     {} | {} | {} '.format(s[6], s[7], s[8]))
+
 
 # Classe pour l'agent d'apprentissage par renforcement Q-Learning
 class QLearningAgent:
@@ -165,11 +167,13 @@ class QLearningAgent:
         best_actions = [action for action, q in zip(allowed_moves, q_values) if q == max_q]
         return random.choice(best_actions)
 
+
 # Fonction pour afficher les statistiques d'un jeu de démonstration
 def demo_game_stats(agent):
     results = [agent.demo_game() for i in range(10000)]
     game_stats = {k: results.count(k) / 100 for k in ['X', 'O', '-']}
     print("    percentage results: {}".format(game_stats))
+
 
 # Point d'entrée principal
 if __name__ == '__main__':
