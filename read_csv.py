@@ -8,7 +8,7 @@ def display_tic_tac_toe_from_csv(file_path):
         for row in reader:
             state, action, value = row
             print("State before win:\n" + format_board(state))
-            print("Win action:\n" + format_board(action))
+            print("Last action:\n" + format_board(action))
             print("Reward:", value)
             print("\n" + "-" * 30 + "\n")
 

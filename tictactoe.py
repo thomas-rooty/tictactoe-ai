@@ -116,7 +116,7 @@ class QLearningAgent:
     def save_q_table(self):
         with open('q_table.csv', 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(['State before win', 'Win action', 'Reward'])
+            writer.writerow(['State before win', 'Last action', 'Reward'])
             for (state, action), value in self.Q.items():
                 writer.writerow([state, action, value])
 
